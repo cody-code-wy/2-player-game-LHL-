@@ -13,6 +13,18 @@ class Game
     100.times { puts '' }
   end
 
+  def ask_question(player,question)
+    puts "Ok, #{player.name}, you have #{player.lives} lives left. Answer this question.".light_white
+    print question
+    unless question.check_answer(gets.chomp.strip)
+      player.lives -= 1
+      puts "Incorrect".red
+    else
+      puts "Correct".green
+    end
+    sleep(2)
+  end
+
   def play_round()
     while @player1.lives > 0 && @player2.lives > 0
       clear

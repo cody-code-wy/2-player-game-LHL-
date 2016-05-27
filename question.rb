@@ -15,21 +15,21 @@ class Question
   end
 
   def to_s
-    "What is #{self.num_a} #{self.get_op_str} #{self.num_b} = "
+    "What is #{@num_a} #{self.get_op_str} #{@num_b} = "
   end
 
   def get_answer()
-    case self.operator
+    case @operator
       when 0
-        self.num_a + self.num_b
+        @num_a + @num_b
       when 1
-        self.num_a - self.num_b
+        @num_a - @num_b
       when 2
-        self.num_a * self.num_b
+        @num_a * @num_b
       when 3
-        self.num_a / self.num_b
+        @num_a / @num_b
       else
-        self.num_a % self.num_b
+        @num_a % @num_b
       end
   end
   
