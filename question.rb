@@ -14,8 +14,8 @@ class Question
     self.get_answer== answer_num
   end
 
-  def puts_question()
-    print "What is #{self.num_a} #{self.get_op_str} #{self.num_b} = "
+  def to_s
+    "What is #{self.num_a} #{self.get_op_str} #{self.num_b} = "
   end
 
   def get_answer()

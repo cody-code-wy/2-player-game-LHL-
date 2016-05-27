@@ -1,1 +1,1 @@
-# 2-player-game-LHL-
+# Object oriented 2-player-game-LHL-
