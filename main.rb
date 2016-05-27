@@ -28,9 +28,9 @@ class Game
   def play_round()
     while @player1.lives > 0 && @player2.lives > 0
       clear
-      @player1.ask_question(Question.new)
+      ask_question(@player1, Question.new)
       clear
-      @player2.ask_question(Question.new)
+      ask_question(@player1, Question.new)
     end
   end
 
@@ -48,6 +48,11 @@ class Game
     puts "#{@player2.name} you have #{@player2.score} points!"
   end
 
+  def prep_round()
+    @player1.lives = 3
+    @player2.lives = 3
+  end
+
   def play_game()
     sleep(2)
     prep_round()
@@ -63,8 +68,8 @@ class Game
   end
 
   def play_rounds()
-    @player1.get_name
-    @player2.get_name
+    @player1.get_name 1
+    @player2.get_name 2
     puts "Lets begin!"
     sleep 1
     begin

@@ -11,7 +11,7 @@ class Player
 
 
   def get_name(num)
-    puts 'Player#{num}, what is your name?'
+    puts "Player#{num}, what is your name?"
     @name = gets.chomp.strip.capitalize
     puts "thanks #{@name}!"
   end
