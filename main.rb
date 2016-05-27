@@ -14,10 +14,10 @@ def get_names()
 end
 
 def get_question()
-  out = {num_a: Random.rand(21), num_b: Random.rand(21), operator: Random.rand(5)}
+  {num_a: Random.rand(21), num_b: Random.rand(21), operator: Random.rand(5)}
 end
 
-def get_op_str(op_code)
+def get_op_string(op_code)
   op_code == 0 ? '+' : op_code == 1 ? '-' : op_code == 2 ? '*' : op_code == 3 ? '/' : '%'
 end
 
